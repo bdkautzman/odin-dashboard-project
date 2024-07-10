@@ -1,0 +1,23 @@
+.main {
+   display: grid;
+   grid-template-columns: 1fr 6fr;
+   grid-template-rows: 1fr 6fr;
+   grid-template-areas: 
+   "nav header"
+   "nav content";
+}
+
+.header {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 2fr repeat(9, 1fr);
+}
