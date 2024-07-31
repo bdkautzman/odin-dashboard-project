@@ -5,6 +5,7 @@
 
 body {
     margin: 0px;
+    min-height: 100vh;
 }
 
 .main {
@@ -94,10 +95,6 @@ button {
     font-size: 18px;
 }
 
-.content {
-    grid-area: content;
-}
-
 .nav {
     grid-area: nav;
     display: grid;
@@ -148,5 +145,59 @@ button {
 }
 
 .content {
-    padding-top: 10px;
+    grid-area: content;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 10fr 4fr;
+    grid-template-rows: 1fr 5fr 1fr 4fr;
+    grid-template-areas: 
+    "proj-title   announce-title"
+    "projects   announcements"
+    "projects   trend-title"
+    "projects   trending";
+    gap: 15px;
+}
+
+.proj-title {
+    grid-area: proj-title;
+}
+
+.announce-title {
+    grid-area: announce-title;
+}
+
+.trend-title {
+    grid-area: trend-title;
+}
+
+.proj-title,
+.announce-title,
+.trend-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.announcements {
+    grid-area: announcements;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.trending {
+    grid-area: trending;
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
 }
