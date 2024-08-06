@@ -23,7 +23,7 @@ body {
     grid-area: header;
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 100px 100px;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "search  profile"
     "greeting    commands";
@@ -186,18 +186,48 @@ button {
     gap: 15px;
 }
 
+.projects > div {
+    background-color: white;
+    border-radius: 7px;
+    border-color: orange;
+    border-width: 0px 0px 0px 7px;
+    border-style: solid;
+    padding: 20px;
+}
+
 .announcements {
     grid-area: announcements;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    padding: 15px 30px 15px 30px;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.announcements > div {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.underline {
+    border-bottom: 1px solid var(--soft-gray);
+}
+
+.announcements > div > p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 12px;
 }
 
 .trending {
     grid-area: trending;
     display: grid;
-    display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 
+}
+
+.projects > div > p {
+    font-size: 14px;
 }
