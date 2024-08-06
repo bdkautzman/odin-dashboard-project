@@ -11,7 +11,7 @@ body {
 .main {
    display: grid;
    grid-template-columns: 1fr 5fr;
-   grid-template-rows: 20vh 80vh;
+   grid-template-rows: 2fr 8fr;
    grid-template-areas: 
    "nav header"
    "nav content";
@@ -149,7 +149,7 @@ button {
     padding: 15px;
     display: grid;
     grid-template-columns: 10fr 4fr;
-    grid-template-rows: 1fr 5fr 1fr 4fr;
+    grid-template-rows: auto 5fr auto 4fr;
     grid-template-areas: 
     "proj-title   announce-title"
     "projects   announcements"
@@ -175,7 +175,7 @@ button {
 .trend-title {
     font-weight: bold;
     font-size: 20px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .projects {
@@ -186,6 +186,12 @@ button {
     gap: 15px;
 }
 
+.proj-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 50%;
+}
+
 .projects > div {
     background-color: white;
     border-radius: 7px;
@@ -193,6 +199,13 @@ button {
     border-width: 0px 0px 0px 7px;
     border-style: solid;
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+.projects > p {
+    margin-bottom: auto;
 }
 
 .announcements {
@@ -225,7 +238,21 @@ button {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: white;
+    border-radius: 7px;
+    padding: 10px;
+}
 
+.trending > div {
+    padding: 8px;
+}
+
+.trending > div > p{
+    margin: 0px;
+}
+
+.trending > img {
+    margin: auto;
 }
 
 .projects > div > p {
